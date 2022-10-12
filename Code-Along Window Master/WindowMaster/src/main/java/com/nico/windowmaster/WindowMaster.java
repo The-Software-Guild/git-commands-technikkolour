@@ -17,9 +17,16 @@ public class WindowMaster{
     public static void main(String[] args){
         float height;
         float width;
+        float windowCost;
+        float windowTrimCost;
+        
+        int windowsNumber;
 
         String stringHeight;
         String stringWidth;
+        String stringWindowCost;
+        String stringWindowTrimCost;
+        String stringWindowsNumber;
 
         float areaOfWindow;
         float cost;
@@ -27,18 +34,27 @@ public class WindowMaster{
 
         Scanner myScanner = new Scanner(System.in);
 
-        System.out.println("Please enter the window height: ");
+        System.out.print("Please enter the window height: ");
         stringHeight = myScanner.nextLine();
-        System.out.println("Please enter the winodw width: ");
+        System.out.print("Please enter the winodw width: ");
         stringWidth = myScanner.nextLine();
-
+        System.out.print("Please enter the cost of the window:  ");
+        stringWindowCost = myScanner.nextLine();
+        System.out.print("Please enter the cost of the window trim: ");
+        stringWindowTrimCost = myScanner.nextLine();
+        System.out.print("Please enter the number of windows: ");
+        stringWindowsNumber = myScanner.nextLine();
+        
         height = Float.parseFloat(stringHeight);
         width = Float.parseFloat(stringWidth);
+        windowCost = Float.parseFloat(stringWindowCost);
+        windowTrimCost = Float.parseFloat(stringWindowTrimCost);
+        windowsNumber = Integer.parseInt(stringWindowsNumber);
 
         areaOfWindow = height * width;
         perimeterOfWindow = 2 * (height + width);
 
-        cost = ((3.50f * areaOfWindow) + (2.25f * perimeterOfWindow));
+        cost = windowsNumber * ((windowCost * areaOfWindow) + (windowTrimCost * perimeterOfWindow));
 
         System.out.println("Window height = " + stringHeight);
         System.out.println("Window width = " + stringWidth);
