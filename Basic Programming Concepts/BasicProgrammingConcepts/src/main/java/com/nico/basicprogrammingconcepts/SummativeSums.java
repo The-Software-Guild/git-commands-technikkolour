@@ -1,4 +1,4 @@
-package com.nico.foundations.basic_programming_concepts;
+package com.nico.basicprogrammingconcepts;
 
 /**
  *
