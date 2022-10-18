@@ -23,13 +23,13 @@ public class DogGenetics {
                 + "on " + dogName + "'s prestigious background right here.\n");
         System.out.println(dogName + " is:\n");
         
-        while(i > 0){
+        while(i > 0) {
             int percentage;
             percentage = percentageLeft;
             
             if (i > 1) {
-                while(percentageLeft - percentage == 0) {
-                    percentage = rand.nextInt(percentageLeft);
+                while(percentageLeft - percentage == 0 || percentageLeft - percentage < i) {
+                    percentage = rand.nextInt(percentageLeft - 1) + 1;
                 }   
             }
             
